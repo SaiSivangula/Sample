@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP app to Azure Web App - weather-app
+name: Build and deploy ASP app to Azure Web App - Weather-app
 
 on:
   push:
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EA43DC2705ED4DC0AD706B6A9D22770B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_96C727ED0D3849698BBBB58936AC302E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_572E68C5B4BE4362B1B0007F5B6F3D5F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_791B518BAA904BD78FC9816DCA5635A1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_66A983E3E5564488A7DA836AD36F9E22 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AA04C9277BAC44379DBF4A73AEE2A398 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'weather-app'
+          app-name: 'Weather-app'
           slot-name: 'Production'
           package: .
           
